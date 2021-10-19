@@ -1,1 +1,41 @@
-ECHO is on.
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Tip Calculator</title>
+</head>
+
+<body>
+    <h1>Calculate Tips</h1>
+    <form>
+        <label>Input Bill Amount</label>:
+        <input type='text' id='billInput' />
+
+        <label>Number of Guests</label>:
+        <input type='text' id='guestInput' />
+        <br>
+
+        <label>Quality of Service</label>:
+        <br>
+            <input type="radio" id="Bad" name="quality-of-service" value="Bad">
+            <label for="bad">HTML</label><br>
+            <input type="radio" id="Okay" name="quality-of-service" value="Okay">
+            <label for="okay">Okay</label><br>
+            <input type="radio" id="Great" name="quality-of-service" value="Great">
+            <label for="great">Great</label>
+        <br>
+
+        <input type="submit" onclick=getTotal()></input>
+    </form>
+
+
+    <script src='app-Calculator.js'></script>
+
+</body>
+
+</html>

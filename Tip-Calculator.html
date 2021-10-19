@@ -13,28 +13,35 @@
 <body>
     <h1>Calculate Tips</h1>
 
-    <!-- Get Input From User -->
+    <!-- Get Data From User -->
     <form>
         <label>Input Bill Amount</label>:
         <input type='text' id='billInput' />
 
         <label>Number of Guests</label>:
         <input type='text' id='guestInput' />
-        <br>
+        
 
         <label>Quality of Service</label>:
-        <br>
-            <input type="radio" id="Bad" name="quality-of-service" value="Bad">
-            <label for="bad">Bad</label><br>
-            <input type="radio" id="Okay" name="quality-of-service" value="Okay">
-            <label for="okay">Okay</label><br>
-            <input type="radio" id="Great" name="quality-of-service" value="Great">
-            <label for="great">Great</label>
-        <br>
-
-        <input type="submit" onclick=getTotal()></input>
+        
+        <select id="service">
+            <option disabled selected value="0">-- Choose an Value --</option>
+            <option value=.3>30% Bomb.com</option>
+            <option value=.2>20% Good</option>
+            <option value=.15>15% Okay</option>
+            <option value=.1>10% Bad</option>
+            <option value=.05>5% Horrible</option>
+        </select>
+        
+        <!--submit buttion -->
+        <input type="button" value="Submit" onclick=tipCalculator.calculateTip()></input>
     </form>
 
+    <!-- used h2 as the placeholder for Calculator output -->
+
+    <h2 id="calOutput"></h2>
+
+    <!--import javascript-->
 
     <script src='app-Calculator.js'></script>
 

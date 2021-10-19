@@ -3,18 +3,25 @@ let slideshow = {
     numOfGuests = 0,
     qualOfService: ['bad', 'okay', 'great'],
 
-// takes billAmount and times it by .2
-tip: function(amount){
-    return amount * 0.2;  
-  },
+    // takes billAmount and times it by .2
+    tip: function (amount) {
 
-// returns bill and adds the tip
-totalWithTip: function(amount){
-  return tip(amount) + amount;
-},
+        extraTip = 0;
 
-// function call to get total
-getTotal: function{
-console.log(`$${totalWithTip(this.bill).toFixed(2)}`);
-}
+        if (numOfGuests > 4) {
+            extraTip = amount * .1;
+        }
+
+        return amount * 0.2;
+    },
+
+    // returns bill and adds the tip
+    totalWithTip: function (amount) {
+        return tip(amount) + amount;
+    },
+
+    // function call to get total
+    getTotal: function{
+        console.log(`$${totalWithTip(this.bill).toFixed(2)}`);
+    }
 };

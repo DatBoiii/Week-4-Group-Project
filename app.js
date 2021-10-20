@@ -1,4 +1,5 @@
 let addToDoButton = document.getElementById('addbutton');
+let clearToDoButton = document.getElementById('clearbutton');
 let ToDocontainer = document.getElementById('list');
 let inputField = document.getElementById('myinput')
 

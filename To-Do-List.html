@@ -4,40 +4,51 @@
         <title>
             The To-Do List
         </title>
+		<link rel="stylesheet" href="style.css">
     </header>
 	<body>
-		<h1>
-			Welcome to the To-Do List Page!
-		</h1>
-        <p>
-			<a href = "#">Homepage</a>
-            <a href = "Tip-Calculator.html">Tip Calculator</a>
-        </p>
-		<h2>
-			How to Use the To-Do List
-		</h2>
-		<p>
-			Step 1. Add an entry in the textbox below, and press the "Add" button.
-		</p>
-		<p>
-			Step 2. Once the entry is complete, you can cross it out but clicking on the entry.
-		</p>
-		<p>
-			Step 3. To remove an entry, double click on the entry to remove it entirely.
-		</p>
-		<p>
-			Step 4. To remove every entry on the list, press the "Clear All" button.
-		</p>
-		<h2>
-			Your To-Do List
-		</h2>
-		<h3>
-			<ul id="list">
-			</ul>
-		</h3>
-		<input type="text" id="myinput" placeholder="Add to list"></input>
-		<button id = "addbutton">Add</button>
-        <button id = "clearbutton">Clear</button>
+		<div class = "Titlepage">
+			<h1>
+				Welcome to the To-Do List Page!
+			</h1>
+			<p>
+				<a href = "Index.html">Homepage</a>
+				<a href = "Tip-Calculator.html">Tip Calculator</a>
+			</p>
+		</div>
+		<div class = "Instructions">
+			<h2>
+				How to Use the To-Do List
+			</h2>
+			<p>
+				Step 1. Add an entry in the textbox below, and press the "Add" button.
+			</p>
+			<p>
+				Step 2. Once the entry is complete, you can cross it out but clicking on the entry.
+			</p>
+			<p>
+				Step 3. To remove an entry, double click on the entry to remove it entirely.
+			</p>
+			<p>
+				Step 4. To remove every entry on the list, press the "Clear" button.
+			</p>
+		</div>
+		<div class = "Your_List">
+			<h2>
+				Your To-Do List
+			</h2>
+		</div>
+		<div class = "Entries">
+			<h3>
+				<ul id="list">
+				</ul>
+			</h3>
+		</div>
+		<div class = "Inputs">
+			<input type="text" id="myinput" placeholder="Add to list"></input>
+			<button id = "addbutton">Add</button>
+			<button id = "clearbutton">Clear</button>
+		</div>
         <script src="app.js"></script>
 	</body>
 </html>

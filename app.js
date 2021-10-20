@@ -15,3 +15,14 @@ addToDoButton.addEventListener('click', function() {
 		ToDocontainer.removeChild(paragraph);
 	})
 })
+
+clearToDoButton.addEventListener('click', function () {
+
+    let list = document.querySelector('#list');
+    console.log(length)
+    while (list.children[0] != null) {
+     //   console.log(i);
+        console.log(list.children[0]);
+        list.children[0].remove();
+    }
+})

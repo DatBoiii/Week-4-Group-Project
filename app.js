@@ -1,28 +1,58 @@
 let addToDoButton = document.getElementById('addbutton');
 let clearToDoButton = document.getElementById('clearbutton');
-let ToDocontainer = document.getElementById('list');
-let inputField = document.getElementById('myinput')
 
-addToDoButton.addEventListener('click', function() {
-	let paragraph = document.createElement('li')
-	paragraph.innerText = myinput.value;
-	ToDocontainer.appendChild(paragraph);
-	myinput.value = "";
-	paragraph.addEventListener('click', function() {
-		paragraph.style.textDecoration = "line-through";
-	})
-    paragraph.addEventListener('dblclick', function() {
-		ToDocontainer.removeChild(paragraph);
-	})
+// To do list object
+
+let toDoList = {
+    ToDocontainer: document.getElementById('list'),
+    inputField: document.getElementById('myinput'),
+
+    addButton: function () {
+        let paragraph = document.createElement('li');
+        paragraph.innerText = myinput.value;
+        this.ToDocontainer.appendChild(paragraph);
+        myinput.value = "";
+        let that = this.ToDocontainer;
+        paragraph.addEventListener('click', function () {
+            paragraph.style.textDecoration = "line-through";
+        /*
+            setTimeout(function () {
+                that.removeChild(paragraph);
+            }, 1000);
+        */
+        })
+        
+        paragraph.addEventListener('dblclick', function() {
+            that.removeChild(paragraph);
+        })
+       
+    },
+
+  
+
+    clearButton: function () {
+        let list = document.querySelector('#list');
+
+    // while array of list children at index 0 is not empty, remove child at index 0
+
+        while (list.children[0] != null) {
+            list.children[0].remove();
+        }
+    }
+
+
+};
+
+// call functions inside object
+
+
+addToDoButton.addEventListener('click', function () {
+    toDoList.addButton();
 })
+
 
 clearToDoButton.addEventListener('click', function () {
 
-    let list = document.querySelector('#list');
-    console.log(length)
-    while (list.children[0] != null) {
-     //   console.log(i);
-        console.log(list.children[0]);
-        list.children[0].remove();
-    }
+   toDoList.clearButton();
 })
+

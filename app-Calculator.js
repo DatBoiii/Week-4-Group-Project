@@ -29,7 +29,7 @@ calculateTip: function() {
 
         this.extraTip = (this.bill * this.qualOfService) / this.numOfGuests;
 
-        this.total = this.bill + this.extraTip;
+        this.total = (this.bill / this.numOfGuests) + this.extraTip;
 
 
     // set a variable to html ID and output to user
@@ -37,7 +37,7 @@ calculateTip: function() {
        let output = document.getElementById("calOutput")
 
        output.innerHTML = `The tip for your $${this.bill} bill would be
-       $${this.extraTip.toFixed(2)} for a total of $${this.total.toFixed(2)}`
+       $${this.extraTip.toFixed(2)} for a total of $${this.total.toFixed(2)} for each person`
     },
 
 };

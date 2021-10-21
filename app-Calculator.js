@@ -7,7 +7,7 @@ let tipCalculator = {
 
     // takes function to grab input from user and calculate tip
 
-    calculateTip: function() {
+calculateTip: function() {
         this.bill = document.getElementById("billInput").value;
         this.qualOfService = document.getElementById("service").value;
         this.numOfGuests = document.getElementById("guestInput").value;
